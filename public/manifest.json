@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Messages",
+  "name": "Message Center, Modern Health Take Home Exercise",
   "icons": [
     {
       "src": "favicon.ico",
