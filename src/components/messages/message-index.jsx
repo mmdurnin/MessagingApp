@@ -52,7 +52,7 @@ class MessageIndex extends Component {
 
         let displayedMessages = this.state.messages.slice(this.state.start, this.state.end).map((message, i) => {
             return (
-                <li key={i} onClick={(e) => e.target.addClass("active")}>
+                <li key={i}>
                 <MessageItem
                     idx={i}
                     uuid={message.uuid}
@@ -60,23 +60,27 @@ class MessageIndex extends Component {
                     content={message.content}
                     sentAt={message.sentAt}
                 />
-                <button onClick={() => this.deleteMessage(i)}></button>
+                <button onClick={() => this.deleteMessage(i)}><p>x</p></button>
                 </li>
             )
         })
 
         return (
             <ul>
-                <section>
-                    Message Display: <button onClick={this.sortMessages}>{sortTitles[this.state.order]}</button>
-                </section>
+                <span>
+                    Message Display: 
+                    <button className="sort-button" onClick={this.sortMessages}>
+                        {sortTitles[this.state.order]}
+                        <i></i>
+                    </button>
+                </span>
                 <section>
                     { displayedMessages }
                 </section>
-                <section>
+                <span>
                     <button onClick={() => this.move("left")}>Prev</button>
                     <button onClick={() => this.move("right")}>Next</button>
-                </section>
+                </span>
             </ul>
         );
     }

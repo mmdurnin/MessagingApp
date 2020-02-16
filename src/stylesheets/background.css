@@ -1,0 +1,31 @@
+.bubble {
+    z-index: -1;
+    position: fixed;
+    height: 700px;
+    width: 700px;
+    border-radius: 3000px;
+    background-color: rgba(196, 185, 230, 0.351);;
+}
+
+.bubble.zero {
+    top: -230vh;
+    left: -25vw;
+    height: 250vh;
+    width: 150vw;
+    background: rgb(59,81,132);
+    background: linear-gradient(180deg, rgb(59,81,132) 0%, rgb(61,99,175) 90%, rgb(76,125,224) 100%);
+}
+
+.bubble.one {
+    background: linear-gradient(75deg, rgba(196, 185, 230, 0.084) 0%, rgba(105, 130, 255, 0.091) 100%);
+    top: 50%;
+    left: -15%;
+}
+.bubble.two {
+    background: linear-gradient(45deg, rgba(71, 119, 216, 0.221) 0%, rgba(185, 228, 255, 0.125) 100%);
+    top: 10%;
+    left: 70%;
+}
+.bubble.three {
+    background: linear-gradient(21deg, rgba(71, 119, 216, 0.098) 0%, rgba(185, 228, 255, 0.098) 100%);
+}

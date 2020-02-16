@@ -1,11 +1,35 @@
 body {
-  margin: 0;
+  margin: .85em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(67,115,210);
+  background-color: rgb(238,239,243);
+}
+div {
+  height: 100%;
+  width: 100%;
+}
+
+h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 0;
+  width: 100%;
+  margin: .35em;
+  padding: .35em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+  font-size: 12px;
+}
+
+h3 strong {
+  color: rgb(105,131,255);
+}
+
+h3 time {
+  color: gray;
 }
 
 ul {
@@ -13,16 +37,98 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 0;
+  margin: 0;
+}
+
+ul > * {
+  width: 70vw;
 }
 
 li {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   list-style-type: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: .85em;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
 }
 
+li:hover {
+  transform: scale(1.01);
+}
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+span > * {
+  margin: .85em;
+}
+
+i {
+  margin-left: 5px;
+  border: 2px solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+b {
+  margin: .85em;
+  font-style: italic;
+  font-size: 14px;
+}
+
+span button {
+  height: 30px;
+  width: 100px;
+  margin: .35em;
+  border: none;
+  border-radius: 2rem;
+  background: rgb(73,237,234);
+  background: linear-gradient(180deg, rgba(73,237,234,1) 0%, rgba(77,191,226,1) 100%);
+  color: white;
+  font-weight: 800;
+}
+
+section button {
+  position: relative;
+  height: 1vw;
+  width: 1vw;
+  margin: .85em 2em;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(255,85,117);
+  color: white;
+}
+
+section > button > p {
+  margin: 0;
+  color: black;
+  font-size: 12px;
+}
+
+.sort-button {
+  width: fit-content;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  font-size: 14px;
+}
+
+button:hover {
+  cursor: pointer;
+}
