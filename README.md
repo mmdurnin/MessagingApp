@@ -26,10 +26,10 @@ Messages are sorted by a function stored in `/src/util/message-util.js`. First, 
 ```JSON
 { "messages": [
         {
-        "sentAt":...,
-         "uuid":...,
-         "content":...,
-         "senderUuid":...},
+        "sentAt": "datetime",
+         "uuid": "int",
+         "content": "any",
+         "senderUuid": "int"},
         ]
 }
 ```
