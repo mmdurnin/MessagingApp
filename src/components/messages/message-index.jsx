@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MessageItem from './message-item';
 
+// import data & sort / remove duplicates
 import { messages } from '../../data.json';
 import { sortData } from '../../util/message-util';
 var sortedMessages = sortData(messages);
@@ -20,6 +21,8 @@ class MessageIndex extends Component {
         this.deleteMessage = this.deleteMessage.bind(this)
     }
 
+    // reverse order of messages, change description of order between "ascending / descending"
+    // (this.state.order used to index rendered word, see sortTitles below)
     sortMessages() {
         this.setState({
             messages: this.state.messages.reverse(),
@@ -27,12 +30,14 @@ class MessageIndex extends Component {
         })
     }
 
+    // remove message from state by slicing / concating messages before and after message @index (i)
     deleteMessage(i) {
         let temp1 = this.state.messages.slice(0, i)
         let temp2 = this.state.messages.slice(i + 1)
         this.setState({ messages: temp1.concat(temp2) })
     }
 
+    // change indices of displayed messages (pagination)
     move(direction) {
         if (direction === "left" && this.state.start !== 0) {
             this.setState({
