@@ -6,17 +6,19 @@ import { messages } from '../../data.json';
 import { sortData } from '../../util/message-util';
 var sortedMessages = sortData(messages);
 
+// set # messages to be displayed
+const DISPLAY_NUM = 5;
 
 class MessageIndex extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            messages: sortedMessages,
-            order: 0,
-            enlarged: "",
-            start: 0,
-            end: 5
-        }
+          messages: sortedMessages,
+          order: 0,
+          enlarged: "",
+          start: 0,
+          end: DISPLAY_NUM
+        };
         this.sortMessages = this.sortMessages.bind(this)
         this.deleteMessage = this.deleteMessage.bind(this)
     }
@@ -30,7 +32,7 @@ class MessageIndex extends Component {
         })
     }
 
-    // remove message from state by slicing / concating messages before and after message @index (i)
+    // remove message from state by slicing / concatenating messages before and after message @index (i)
     deleteMessage(i) {
         let temp1 = this.state.messages.slice(0, i)
         let temp2 = this.state.messages.slice(i + 1)
@@ -39,15 +41,15 @@ class MessageIndex extends Component {
 
     // change indices of displayed messages (pagination)
     move(direction) {
-        if (direction === "left" && this.state.start !== 0) {
+        if (direction === "left" && this.state.start > 0) {
             this.setState({
-                start: this.state.start - 5,
-                end: this.state.end - 5
+                start: this.state.start - DISPLAY_NUM,
+                end: this.state.end - DISPLAY_NUM
             })
         } else if (direction === "right" && this.state.end < this.state.messages.length - 1) {
             this.setState({
-                start: this.state.start + 5,
-                end: this.state.end + 5
+                start: this.state.start + DISPLAY_NUM,
+                end: this.state.end + DISPLAY_NUM
             })
         }
     }
