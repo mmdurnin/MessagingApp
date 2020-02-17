@@ -1,11 +1,7 @@
 # Messaging Center
 
 ### Summary
-This front-end project was designed to display messages imported from a JSON file. It was built using React and bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
-
-### Functionalities
-This project includes the following features:
-*Message display*
+This front-end project was designed to demo an inbox / messaging platform. It was built using React and bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ### Installation & Getting Started
 
@@ -18,4 +14,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
