@@ -104,20 +104,23 @@ span button {
 
 section button {
   position: relative;
-  height: 1vw;
-  width: 1vw;
+  height: fit-content;
+  width: fit-content;
   margin: .85em 2em;
-  padding: 0;
+  padding: .15em .35em;
   border: none;
   border-radius: 4px;
   background-color: rgb(255,85,117);
   color: white;
 }
 
-section > button > p {
+section button > p {
+  position: relative;
   margin: 0;
-  color: black;
-  font-size: 12px;
+  padding: 0;
+  color: white;
+  font-size: 8px;
+  font-weight: 800;
 }
 
 .sort-button {
