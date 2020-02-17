@@ -5,9 +5,11 @@ This front-end project was designed to demo an inbox / messaging platform. It wa
 
 ### Installation & Getting Started
 
-In the project directory, you can run:
+Navigate to the project directory. From the command line:
 
-### `npm start`
+`npm install`
+
+`npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
