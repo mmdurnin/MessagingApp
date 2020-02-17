@@ -24,9 +24,9 @@ function dateComparison(date1, date2) {
     date2 = date2.sentAt;
 
     if (date1 < date2) {
-        comparison = -1;
-    } else if (date1 > date2) {
         comparison = 1;
+    } else if (date1 > date2) {
+        comparison = -1;
     }
     return comparison
 }

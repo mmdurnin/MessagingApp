@@ -14,7 +14,7 @@ class MessageIndex extends Component {
         super(props)
         this.state = {
           messages: sortedMessages,
-          order: 0,
+          order: 1,
           enlarged: "",
           start: 0,
           end: DISPLAY_NUM
